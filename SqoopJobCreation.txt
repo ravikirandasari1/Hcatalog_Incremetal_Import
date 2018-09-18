@@ -9,5 +9,4 @@ sqoop job --create DB1_EVENT_LATEST_JOB -- import \
 --hcatalog-home /usr/hdp/current/hive-webhcat \
 --hcatalog-database AYPD \
 --hcatalog-table DB1_AGR_EVENT_LATEST \
---create-hcatalog-table \
 --hcatalog-storage-stanza 'stored as orcfile'
