@@ -1,0 +1,13 @@
+sqoop job --create DB1_EVENT_LATEST_JOB -- import \
+--options-file '/home/hdfs/sqoopimport/DBConnections/connectionDetails.txt' \
+--password-file 'hdfs://ssehdp101.metmom.mmih.biz:8020/passwd/psw.txt' \
+--table AYOREPORT.AGR_EVENT_PURPOSE_RANK_LATEST \
+--incremental lastmodified \
+--check-column LOAD_AT \
+--last-value '2018-09-04 12:52:24.296083' \
+-m 1 \
+--hcatalog-home /usr/hdp/current/hive-webhcat \
+--hcatalog-database AYPD \
+--hcatalog-table DB1_AGR_EVENT_LATEST \
+--create-hcatalog-table \
+--hcatalog-storage-stanza 'stored as orcfile'
