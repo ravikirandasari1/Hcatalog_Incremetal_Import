@@ -1,0 +1,13 @@
+sqoop  --import \
+--options-file '/home/hdfs/sqoopimport/DBConnections/connectionDetails.txt' \
+--password-file 'hdfs://NN:8020/passwd/psw.txt' \
+--table DB1.AGR_EVENT_LATEST \
+--incremental lastmodified \
+--check-column LOAD_AT \
+-m 4 \
+--split-by LOAD_AT \
+--hcatalog-home /usr/hdp/current/hive-webhcat \
+--hcatalog-database AYPD \
+--hcatalog-table DB1_AGR_EVENT_LATEST \
+--create-hcatalog-table \
+--hcatalog-storage-stanza 'stored as orcfile'
