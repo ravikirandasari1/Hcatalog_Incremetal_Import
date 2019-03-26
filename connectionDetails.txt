@@ -1,4 +1,4 @@
 --connect
-jdbc:db2://10.29.21.1:60000/ODSPD
+jdbc:db2://10.20.21.1:60000/ODSPD
 --username
 ravi
